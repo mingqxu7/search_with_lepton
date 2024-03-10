@@ -71,18 +71,18 @@ export const Answer: FC<{ markdown: string; sources: Source[] }> = ({
                               <div className="text-ellipsis text-blue-500 overflow-hidden whitespace-nowrap">
                                 <a
                                   title={source.name}
-                                  href={source.url}
+                                  href={source.link}
                                   target="_blank"
                                 >
-                                  {source.url}
+                                  {source.link}
                                 </a>
                               </div>
                             </div>
                             <div className="flex-none flex items-center relative">
                               <img
                                 className="h-3 w-3"
-                                alt={source.url}
-                                src={`https://www.google.com/s2/favicons?domain=${source.url}&sz=${16}`}
+                                alt={source.link}
+                                src={`https://www.google.com/s2/favicons?domain=${source.link}&sz=${16}`}
                               />
                             </div>
                           </div>

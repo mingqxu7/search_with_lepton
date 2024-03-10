@@ -8,14 +8,14 @@ const SourceItem: FC<{ source: Source; index: number }> = ({
   source,
   index,
 }) => {
-  const { id, name, url } = source;
-  const domain = new URL(url).hostname;
+  const { id, name, link } = source;
+  const domain = new URL(link).hostname;
   return (
     <div
       className="relative text-xs py-3 px-3 bg-zinc-100 hover:bg-zinc-200 rounded-lg flex flex-col gap-2"
       key={id}
     >
-      <a href={url} target="_blank" className="absolute inset-0"></a>
+      <a href={link} target="_blank" className="absolute inset-0"></a>
       <div className="font-medium text-zinc-950 text-ellipsis overflow-hidden whitespace-nowrap break-words">
         {name}
       </div>
