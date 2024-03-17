@@ -1,4 +1,4 @@
-  import concurrent.futures
+import concurrent.futures
 import glob
 import json
 import os
@@ -268,7 +268,7 @@ def search_with_searchapi(query: str, subscription_key: str):
             {"name": c["title"], "url": c["link"], "snippet": c.get("snippet", "")}
             for c in json_content["organic_results"]
         ]
-        
+
         if json_content.get("related_questions"):
             for question in json_content["related_questions"]:
                 if question.get("source"):
