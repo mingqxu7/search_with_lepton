@@ -1,4 +1,4 @@
-import concurrent.futures
+  import concurrent.futures
 import glob
 import json
 import os
@@ -7,6 +7,8 @@ import threading
 import requests
 import traceback
 from typing import Annotated, List, Generator, Optional
+from dotenv import load_dotenv
+load_dotenv()
 
 from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, StreamingResponse, RedirectResponse
@@ -272,8 +274,8 @@ def search_with_searchapi(query: str, subscription_key: str):
                 if question.get("source"):
                     url = question.get("source").get("link", "")
                 else:
-                    url = ""  
-                    
+                    url = ""
+
                 snippet = question.get("answer", "")
 
                 if url and snippet:
